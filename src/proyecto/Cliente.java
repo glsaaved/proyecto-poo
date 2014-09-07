@@ -9,21 +9,21 @@ import java.util.ArrayList;
  *
  */
 public class Cliente extends Persona{
-	private ArrayList compras;
+	private ArrayList<Venta> compras;
 	private String tipo_cliente;
 
 	public Cliente(int rut, char dig_verificador, String nombre,
 			String apellido, int dia, int mes, int año) 
 	{
 		super(rut, dig_verificador, nombre, apellido, dia, mes, año);
-		this.tipo_cliente="Esporádico";
+		this.setTipo_cliente("Esporádico");
 		compras=new ArrayList<Venta>();
 	}
 	public Cliente(int rut, char dig_verificador, String nombre,
 			String apellido, int dia, int mes, int año,char sexo) 
 	{
 		super(rut, dig_verificador, nombre, apellido, dia, mes, año,sexo);
-		this.tipo_cliente="Esporádico";
+		this.setTipo_cliente("Esporádico");
 		compras=new ArrayList<Venta>();
 	}
 	/**
@@ -97,13 +97,19 @@ public class Cliente extends Persona{
 			}
 		}
 		if(contador<10)
-			this.tipo_cliente="Esporádico";
+			this.setTipo_cliente("Esporádico");
 		else if(contador<30)
-			this.tipo_cliente="Normal";
+			this.setTipo_cliente("Normal");
 		else if(contador<50)
-			this.tipo_cliente="Potencial";
+			this.setTipo_cliente("Potencial");
 		else if(contador>=50)
-			this.tipo_cliente="frecuente";
+			this.setTipo_cliente("frecuente");
+	}
+	public String getTipo_cliente() {
+		return tipo_cliente;
+	}
+	private void setTipo_cliente(String tipo_cliente) {
+		this.tipo_cliente = tipo_cliente;
 	}
 	
 }
