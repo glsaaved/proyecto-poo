@@ -71,7 +71,7 @@ public class Cliente extends Persona{
 	 */
 	public boolean delete_compra(int index)
 	{
-		if(index>=0&&compras.size()>0&&compras.size()>index)
+		if(index>=0&&compras.size()>0&&compras.size()<index)
 		{
 			compras.remove(index);
 			return true;

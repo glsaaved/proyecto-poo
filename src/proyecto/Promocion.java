@@ -81,6 +81,22 @@ public class Promocion implements ManejoProductos{
 	}
 	@Override
 	/**
+	 * borra un producto de la lista productos
+	 * @param index, posicion del producto a borrar
+	 * @return true si lo elimino, false en otro caso
+	 */
+	public boolean deleteProducto(int index) {
+		if(index>=0&&productos.size()>0&&productos.size()<index)
+		{
+			productos.remove(index);
+			return true;
+		}
+		else
+			return false;	
+
+	}
+	@Override
+	/**
 	 * retorna el precio de la promocion
 	 * @return el precio total de productos  - descuento
 	 */
@@ -134,5 +150,7 @@ public class Promocion implements ManejoProductos{
 			productos.clear();
 		}
 	}
+
+
 	
 }

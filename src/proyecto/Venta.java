@@ -104,6 +104,25 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	}
 	@Override
 	/**
+	 * borra un producto de la lista productos
+	 * @param index, posicion del producto a borrar
+	 * @return true si lo elimino, false en otro caso
+	 */
+	public boolean deleteProducto(int index) {
+		if(index>=0&&productos.size()>0&&productos.size()<index)
+		{
+			total-=productos.get(index).getPrecio();
+			if(total<0)
+				total=0;
+			productos.remove(index);
+			return true;
+		}
+		else
+			return false;	
+
+	}
+	@Override
+	/**
 	 * quita todos los productos que sean p
 	 * @param p, producto del cual se deben quitar todas las coincidencias
 	 * @return true si al menos elimino 1, false en otro caso
@@ -220,6 +239,20 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 		return false;
 	}
 	@Override
+	public boolean deletePromocion(int index) {
+		if(index>=0&&promociones.size()>0&&promociones.size()<index)
+		{
+			total-=promociones.get(index).getTotal();
+			if(total<0)
+				total=0;
+			promociones.remove(index);
+			return true;
+		}
+		else
+			return false;	
+
+	}
+	@Override
 	public Promocion getPromocion(int index) {
 		if(index < 0 || index >= promociones.size())
 		{
@@ -256,6 +289,4 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 		verifValida();
 		
 	}
-	
-
 }
