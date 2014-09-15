@@ -32,6 +32,15 @@ public class Fecha {
 		else
 			valida=false;
 	}
+	public Fecha()
+	{
+		fecha = new GregorianCalendar();
+		año = fecha.get(Calendar.YEAR);
+        mes = fecha.get(Calendar.MONTH);
+        dia = fecha.get(Calendar.DAY_OF_MONTH);
+        asignar_mes();
+        valida=true;
+	}
 	//asigna el mes con su correspondiente string
 	private void asignar_mes()
 	{

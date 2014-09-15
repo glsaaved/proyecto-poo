@@ -1,5 +1,7 @@
 package proyecto;
 
+import java.util.Calendar;
+
 public class Fecha_Hora extends Fecha {
 
 	private int hora;
@@ -17,6 +19,17 @@ public class Fecha_Hora extends Fecha {
 			}
 			else
 				setValida();
+		}
+	}
+	public Fecha_Hora()
+	{
+		super();
+		this.hora=fecha.get(Calendar.HOUR);
+		this.minuto=fecha.get(Calendar.MINUTE);
+		this.segundo=fecha.get(Calendar.SECOND);
+		if(!isValida())
+		{
+			setValida();
 		}
 	}
 	public int getHora() {
