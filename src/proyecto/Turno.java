@@ -22,6 +22,10 @@ public class Turno {
 		if(salida !=null&&salida.isValida())
 			this.salida=salida;
 	}
+	public void setSalida()
+	{
+		this.salida=new Fecha_Hora();
+	}
 	public Fecha_Hora getEntrada()
 	{
 		if(entrada.isValida())

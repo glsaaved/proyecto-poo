@@ -86,7 +86,7 @@ public class Promocion implements ManejoProductos{
 	 * @return true si lo elimino, false en otro caso
 	 */
 	public boolean deleteProducto(int index) {
-		if(index>=0&&productos.size()>0&&productos.size()<index)
+		if(index>=0&&productos.size()>0&&productos.size()>index)
 		{
 			productos.remove(index);
 			return true;

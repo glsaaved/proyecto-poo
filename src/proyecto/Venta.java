@@ -109,7 +109,7 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 * @return true si lo elimino, false en otro caso
 	 */
 	public boolean deleteProducto(int index) {
-		if(index>=0&&productos.size()>0&&productos.size()<index)
+		if(index>=0&&productos.size()>0&&productos.size()>index)
 		{
 			total-=productos.get(index).getPrecio();
 			if(total<0)
@@ -240,7 +240,7 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	}
 	@Override
 	public boolean deletePromocion(int index) {
-		if(index>=0&&promociones.size()>0&&promociones.size()<index)
+		if(index>=0&&promociones.size()>0&&promociones.size()>index)
 		{
 			total-=promociones.get(index).getTotal();
 			if(total<0)
