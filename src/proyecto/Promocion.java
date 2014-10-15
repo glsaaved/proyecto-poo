@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Promocion implements ManejoProductos{
 	private String nombre;
-	private ArrayList<Producto> productos;
+	private ListaProductos productos;
 	private int descuento;//entero entre 0 y 100, representa el porcentaje
 	/**
 	 * constructor
@@ -15,21 +15,19 @@ public class Promocion implements ManejoProductos{
 		this.nombre=nombre;
 		descuento=0;
 		setDescuento(d);
+		productos=new ListaProductos();
 	}
-
+	public String getNombre()
+	{
+		return nombre;
+	}
 	/**
 	 * metodo interno que calcula el total real de los productos
 	 * @return cont, total de los precios de los productos
 	 */
 	private int get_total()
 	{
-		int cont=0;
-		for(int i=0; i<productos.size();i++)
-		{
-			if(productos.get(i)!=null)
-				cont=productos.get(i).getPrecio();
-		}
-		return cont;
+		return productos.getTotal();
 	}
 
 	/**
@@ -50,7 +48,7 @@ public class Promocion implements ManejoProductos{
 	public boolean addProducto(Producto p) {
 		if(p != null)
 		{
-			if(this.productos.add(p))
+			if(this.productos.addProducto(p))
 			{
 				return true;
 			}
@@ -70,7 +68,7 @@ public class Promocion implements ManejoProductos{
 	{
 		if(productos.contains(p))
 		{
-			if(productos.remove(p))
+			if(productos.deleteProducto(p))
 			{
 				return true;
 			}
@@ -88,23 +86,14 @@ public class Promocion implements ManejoProductos{
 	public boolean deleteProducto(int index) {
 		if(index>=0&&productos.size()>0&&productos.size()>index)
 		{
-			productos.remove(index);
+			productos.deleteProducto(index);
 			return true;
 		}
 		else
 			return false;	
 
 	}
-	@Override
-	/**
-	 * retorna el precio de la promocion
-	 * @return el precio total de productos  - descuento
-	 */
-	public int getTotal()
-	{
-		double desc=(descuento/100)*get_total();
-		return (int)(get_total()-desc);
-	}
+
 	@Override
 	/**
 	 * metodo que retorna el producto en la posicion index
@@ -118,7 +107,7 @@ public class Promocion implements ManejoProductos{
 		}
 		else
 		{
-			return productos.get(index);
+			return productos.getProducto(index);
 		}
 	}
 	@Override
@@ -147,10 +136,18 @@ public class Promocion implements ManejoProductos{
 	{
 		if(!productos.isEmpty())
 		{
-			productos.clear();
+			productos.deleteAll();
 		}
 	}
-
+	/**
+	 * retorna el precio de la promocion
+	 * @return el precio total de productos  - descuento
+	 */
+	public int getTotal()
+	{
+		double desc=(descuento/100)*get_total();
+		return (int)(get_total()-desc);
+	}
 
 	
 }

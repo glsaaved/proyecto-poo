@@ -4,20 +4,27 @@ import java.util.*;
 
 public class Venta implements ManejoProductos,ManejoPromociones {
 	private Fecha_Hora fecha;
-	private int total;
 	private Trabajador atendido_por;
-	private ArrayList<Producto> productos;
-	private ArrayList<Promocion> promociones;
+	private ListaProductos productos;
+	private ListaPromociones promociones;
+
 	private boolean valida;//verifica la integridad de la venta
 	public Venta(Trabajador t)
 	{
 		this.fecha=new Fecha_Hora();
-		this.productos=new ArrayList<Producto>();
-		this.promociones=new ArrayList <Promocion>();
+		this.productos=new ListaProductos();
+		this.promociones=new ListaPromociones();
 		valida=false;
 		setAtendido_por(t);
 	}
 	
+	public Venta() {
+		this.fecha=new Fecha_Hora();
+		this.productos=new ListaProductos();
+		this.promociones=new ListaPromociones();
+		valida=false;
+	}
+
 	/**
 	 * return si es valida la venta o no
 	 */
@@ -65,7 +72,7 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 */
 	private void verifValida()
 	{
-		if((productos.isEmpty()&&promociones.isEmpty())||total==0)
+		if((productos.isEmpty()&&promociones.isEmpty())||getTotal()==0)
 		{
 			this.valida=false;
 		}
@@ -87,20 +94,9 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 */
 	public boolean deleteProducto(Producto p)
 	{
-		if(productos.contains(p))
-		{
-			if(productos.remove(p))
-			{
-				total-=p.getPrecio();
-				if(total<0)
-					total=0;
-				verifValida();
-				return true;
-			}
-			else
-				return false;
-		}
-		return false;
+		boolean b=productos.deleteProducto(p);
+		verifValida();
+		return b;
 	}
 	@Override
 	/**
@@ -109,16 +105,9 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 * @return true si lo elimino, false en otro caso
 	 */
 	public boolean deleteProducto(int index) {
-		if(index>=0&&productos.size()>0&&productos.size()>index)
-		{
-			total-=productos.get(index).getPrecio();
-			if(total<0)
-				total=0;
-			productos.remove(index);
-			return true;
-		}
-		else
-			return false;	
+		boolean b=productos.deleteProducto(index);
+		verifValida();
+		return b;
 
 	}
 	@Override
@@ -129,19 +118,9 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 */
 	public boolean deleteAllProducto(Producto p)
 	{
-		int cont=0;
-		while(deleteProducto(p))
-		{
-			cont++;
-			total-=p.getPrecio();
-			if(total<0)
-				total=0;
-		}
+		boolean b=productos.deleteAllProducto(p);
 		verifValida();
-		if(cont>0)
-			return true;
-		else
-			return false;
+		return b;
 	}
 	@Override
 	/**
@@ -149,22 +128,10 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 */
 	public void deleteAll()
 	{
-		if(!productos.isEmpty())
-		{
-			productos.clear();
-			total=0;
-		}
+		productos.deleteAll();
 		verifValida();
 	}
-	@Override
-	/**
-	 * retorna el total de la venta
-	 * @return 
-	 */
-	public int getTotal() {
 
-		return total;
-	}
 	@Override
 	/**
 	 * metodo que retorna el producto en la posicion index
@@ -172,14 +139,7 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 * @return producto en la posicion index, null en otro caso
 	 */
 	public Producto getProducto(int index) {
-		if(index < 0 || index >= productos.size())
-		{
-			return null;
-		}
-		else
-		{
-			return productos.get(index);
-		}
+		return productos.getProducto(index);
 	}
 	@Override
 	/**
@@ -188,105 +148,49 @@ public class Venta implements ManejoProductos,ManejoPromociones {
 	 * @return true si lo agrega, false en otro caso
 	 */
 	public boolean addProducto(Producto p) {
-		if(p != null)
-		{
-			if(this.productos.add(p))
-			{
-				total+=p.getPrecio();
-				verifValida();
-				return true;
-			}
-			else
-				return false;
-		}
-		else
-			return false;
+		boolean b=productos.addProducto(p);
+		verifValida();
+		return b;
 	}
 
-
-	//promociones
 	@Override
 	public boolean addPromocion(Promocion p) {
-		if(p != null)
-		{
-			if(this.promociones.add(p))
-			{
-				total+=p.getTotal();
-				verifValida();
-				return true;
-			}
-			else
-				return false;
-		}
-		else
-			return false;
+		return promociones.addPromocion(p);
 	}
+
 	@Override
 	public boolean deletePromocion(Promocion p) {
-		if(promociones.contains(p))
-		{
-			if(promociones.remove(p))
-			{
-				total-=p.getTotal();
-				if(total<0)
-					total=0;
-				verifValida();
-				return true;
-			}
-			else
-				return false;
-		}
-		return false;
+		return promociones.deletePromocion(p);
 	}
+
 	@Override
 	public boolean deletePromocion(int index) {
-		if(index>=0&&promociones.size()>0&&promociones.size()>index)
-		{
-			total-=promociones.get(index).getTotal();
-			if(total<0)
-				total=0;
-			promociones.remove(index);
-			return true;
-		}
-		else
-			return false;	
-
+		return promociones.deletePromocion(index);
 	}
+
 	@Override
 	public Promocion getPromocion(int index) {
-		if(index < 0 || index >= promociones.size())
-		{
-			return null;
-		}
-		else
-		{
-			return promociones.get(index);
-		}
+		return promociones.getPromocion(index);
 	}
+
 	@Override
 	public boolean deleteAllPromocion(Promocion p) {
-		int cont=0;
-		while(deletePromocion(p))
-		{
-			cont++;
-			total-=p.getTotal();
-			if(total<0)
-				total=0;
-		}
-		verifValida();
-		if(cont>0)
-			return true;
-		else
-			return false;
+		return promociones.deleteAllPromocion(p);
 	}
+
 	@Override
 	public void deleteAll_() {
-		if(!promociones.isEmpty())
-		{
-			promociones.clear();
-			total=0;
-		}
-		verifValida();
+		promociones.deleteAll_();
 		
 	}
+	/**
+	 * retorna el total de la venta
+	 * @return 
+	 */
+	public int getTotal() {
+
+		int total_final=productos.getTotal()+promociones.getTotal();
+		return total_final;
+	}
+
 }

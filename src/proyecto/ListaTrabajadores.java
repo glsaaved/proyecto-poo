@@ -2,13 +2,11 @@ package proyecto;
 
 import java.util.*;
 
-public class ListaTrabajadores {
+public class ListaTrabajadores implements ManejoTrabajadores {
 	private ArrayList <Trabajador> trabajadores;
-	private int total;
 	public ListaTrabajadores()
 	{
 		trabajadores=new ArrayList<Trabajador>();
-		total=0;
 	}
 	
 	public boolean addTrabajador(Trabajador t)
@@ -18,7 +16,6 @@ public class ListaTrabajadores {
 			if(!trabajadores.contains(t))
 			{
 				trabajadores.add(t);
-				total++;
 				return true;
 			}
 			else
@@ -32,7 +29,6 @@ public class ListaTrabajadores {
 		if(t!=null&&trabajadores.contains(t))
 		{
 			trabajadores.remove(t);
-			total--;
 			return true;
 		}
 		else
@@ -43,7 +39,6 @@ public class ListaTrabajadores {
 		if(index>=0&&trabajadores.size()>index)
 		{
 			trabajadores.remove(index);
-			total--;
 			return true;
 		}
 		else
@@ -66,6 +61,15 @@ public class ListaTrabajadores {
 		}
 		else
 			return -1;
+	}
+	public int size()
+	{
+		return trabajadores.size();
+	}
+	
+	public boolean contains(Trabajador p)
+	{
+		return trabajadores.contains(p);
 	}
 	
 	

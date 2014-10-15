@@ -1,0 +1,6 @@
+20,Combo maxi
+1e,2f,5re
+10,Combo mini
+1e,2f
+40,Combo super
+1e,2f,5re,6sre

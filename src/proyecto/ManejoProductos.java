@@ -7,7 +7,6 @@ public interface ManejoProductos {
 	public Producto getProducto(int index);
 	public boolean deleteAllProducto(Producto p);
 	public void deleteAll();
-	public int getTotal();
 	
 
 }

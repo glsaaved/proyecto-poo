@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="false" 
+  realizations="false" associations="false" dependencies="false" nesting-relationships="false">  
+  <class id="1" language="java" name="proyecto.Cadena" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Cadena.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="423" width="267" x="490" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="proyecto.Local" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Local.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="837" width="273" x="797" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="proyecto.ManejoTrabajadores" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ManejoTrabajadores.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="208" x="1110" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="proyecto.Fecha_Hora" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Fecha_Hora.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="174" x="1358" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="proyecto.Cliente" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Cliente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="230" x="1572" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="proyecto.Promocion" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Promocion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="202" x="1842" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="proyecto.ListaProductos" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaProductos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="202" x="2084" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="proyecto.Fecha" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Fecha.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="145" x="2326" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="proyecto.Principal" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Principal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="120" x="2511" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="proyecto.Turno" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Turno.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="168" x="2671" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="proyecto.ListaTrabajadores" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaTrabajadores.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="208" x="2879" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" language="java" name="proyecto.ManejoProductos" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ManejoProductos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="202" x="3127" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="13" language="java" name="proyecto.ListaLocales" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaLocales.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="318" x="3369" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="proyecto.ListaPromociones" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaPromociones.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="217" x="3727" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="proyecto.Producto" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Producto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="199" x="3984" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="proyecto.Venta" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Venta.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="549" width="216" x="4223" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="proyecto.Persona" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Persona.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="238" x="4479" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="proyecto.Trabajador" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Trabajador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="333" width="330" x="4757" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="proyecto.ManejoPromociones" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ManejoPromociones.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="216" x="5127" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="false" multiplicity="false"/>
+</class-diagram>

@@ -8,14 +8,14 @@ public class Fecha {
 	private int año;
 	private String mes_1;
 	private boolean valida;
-	Calendar fecha;
+	private Calendar fecha;
 
 	//clase que usada para el manejo de una fecha
 	//no puede ser mayor al año actual+1
 	public Fecha(int dia, int mes, int año)
 	{
-		fecha = new GregorianCalendar();
-		int año_actual = fecha.get(Calendar.YEAR);
+		setFecha(new GregorianCalendar());
+		int año_actual = getFecha().get(Calendar.YEAR);
 		if(dia>0&&dia<=31&&mes>0&&mes<=12&&año>1900&&año<=año_actual+1)
 		{	
 			if(mes==2&&dia>29)
@@ -34,10 +34,10 @@ public class Fecha {
 	}
 	public Fecha()
 	{
-		fecha = new GregorianCalendar();
-		año = fecha.get(Calendar.YEAR);
-        mes = fecha.get(Calendar.MONTH);
-        dia = fecha.get(Calendar.DAY_OF_MONTH);
+		setFecha(new GregorianCalendar());
+		año = getFecha().get(Calendar.YEAR);
+        mes = getFecha().get(Calendar.MONTH);
+        dia = getFecha().get(Calendar.DAY_OF_MONTH);
         asignar_mes();
         valida=true;
 	}
@@ -73,9 +73,9 @@ public class Fecha {
 	public int años_diff()
 	{
 		int diff;
-		int año1 = fecha.get(Calendar.YEAR);
-        int mes1 = fecha.get(Calendar.MONTH);
-        int dia1 = fecha.get(Calendar.DAY_OF_MONTH);
+		int año1 = getFecha().get(Calendar.YEAR);
+        int mes1 = getFecha().get(Calendar.MONTH);
+        int dia1 = getFecha().get(Calendar.DAY_OF_MONTH);
         if(año1<año)
         	diff=año-año1;
         else
@@ -95,9 +95,9 @@ public class Fecha {
 	public int mes_diff_menor()
 	{
 		int diff;
-		int año1 = fecha.get(Calendar.YEAR);
-        int mes1 = fecha.get(Calendar.MONTH);
-        int dia1 = fecha.get(Calendar.DAY_OF_MONTH);
+		int año1 = getFecha().get(Calendar.YEAR);
+        int mes1 = getFecha().get(Calendar.MONTH);
+        int dia1 = getFecha().get(Calendar.DAY_OF_MONTH);
         if(año1<año)
         {
         	diff=(año-año1-1)*12;
@@ -151,5 +151,11 @@ public class Fecha {
 			valida=false;
 		else
 			valida=true;
+	}
+	public Calendar getFecha() {
+		return fecha;
+	}
+	public void setFecha(Calendar fecha) {
+		this.fecha = fecha;
 	}
 }

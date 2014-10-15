@@ -48,8 +48,16 @@ public class Trabajador extends Persona{
 	{
 		return this.estatura;
 	}
+	public void setEstatura(double d)
+	{
+		this.estatura=d;
+	}
 	public double getPeso()
 	{
 		return this.peso;
+	}
+	public void setPeso(double p)
+	{
+		this.peso=p;
 	}
 }

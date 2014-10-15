@@ -24,9 +24,9 @@ public class Fecha_Hora extends Fecha {
 	public Fecha_Hora()
 	{
 		super();
-		this.hora=fecha.get(Calendar.HOUR);
-		this.minuto=fecha.get(Calendar.MINUTE);
-		this.segundo=fecha.get(Calendar.SECOND);
+		this.hora=getFecha().get(Calendar.HOUR);
+		this.minuto=getFecha().get(Calendar.MINUTE);
+		this.segundo=getFecha().get(Calendar.SECOND);
 		if(!isValida())
 		{
 			setValida();

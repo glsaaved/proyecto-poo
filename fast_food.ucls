@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" automaticImage="GIF" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="proyecto.Cadena" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Cadena.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="919" y="-183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="proyecto.Local" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Local.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1155" y="695"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="proyecto.ManejoTrabajadores" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ManejoTrabajadores.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="208" x="214" y="1115"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="proyecto.Fecha_Hora" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Fecha_Hora.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="174" x="401" y="2288"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="proyecto.Cliente" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Cliente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="230" x="463" y="346"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="proyecto.Promocion" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Promocion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1202" y="1771"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="proyecto.ListaProductos" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaProductos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="202" x="1114" y="2288"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="proyecto.Fecha" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Fecha.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="145" x="8" y="346"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="proyecto.Principal" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Principal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="120" x="591" y="-382"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="proyecto.Turno" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Turno.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="168" x="401" y="1951"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="proyecto.ListaTrabajadores" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaTrabajadores.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="208" x="462" y="1115"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" language="java" name="proyecto.ManejoProductos" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ManejoProductos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="202" x="794" y="2643"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="13" language="java" name="proyecto.ListaLocales" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaLocales.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="824" y="180"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="proyecto.ListaPromociones" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ListaPromociones.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1168" y="1389"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="proyecto.Producto" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Producto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="199" x="1114" y="2643"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="proyecto.Venta" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Venta.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="826" y="1357"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="proyecto.Persona" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Persona.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="238" x="174" y="27"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="proyecto.Trabajador" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/Trabajador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="330" x="401" y="1632"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="proyecto.ManejoPromociones" project="proyecto-poo" 
+    file="/proyecto-poo/src/proyecto/ManejoPromociones.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="981" y="1876"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <generalization id="20">    
+    <bendpoint x="183" y="1115"/>    
+    <bendpoint x="183" y="346"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <realization id="22">    
+    <bendpoint x="998" y="1115"/>    
+    <bendpoint x="845" y="1632"/>    
+    <bendpoint x="803" y="1951"/>    
+    <bendpoint x="803" y="2288"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="23">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="24" name="productos"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="27" name="productos"/>      
+      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <bendpoint x="761" y="1632"/>    
+    <bendpoint x="761" y="1951"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="30" name="fecha"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="33">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="34" name="atendido_por"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="37" name="locales"/>      
+      <multiplicity id="38" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="39">    
+    <bendpoint x="162" y="1951"/>    
+    <bendpoint x="162" y="1632"/>    
+    <bendpoint x="162" y="1115"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="40">    
+    <bendpoint x="1019" y="1115"/>    
+    <bendpoint x="1019" y="1632"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <realization id="41">    
+    <bendpoint x="962" y="2288"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="42">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="43" name="compras"/>      
+      <multiplicity id="44" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="45">    
+    <bendpoint x="721" y="1115"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="46" name="vendedor_actual"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="48">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="49" name="entrada"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="52" name="fecha_nacimiento"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="55" name="trabajadores"/>      
+      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="58" name="ventas"/>      
+      <multiplicity id="59" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="60">    
+    <bendpoint x="1364" y="27"/>    
+    <bendpoint x="1364" y="346"/>    
+    <bendpoint x="1364" y="1115"/>    
+    <bendpoint x="1364" y="1632"/>    
+    <bendpoint x="1364" y="1951"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="61" name="productos"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="64" name="salida"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="66">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="67">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="68" name="promociones"/>      
+      <multiplicity id="69" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="70">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="71">    
+    <bendpoint x="700" y="1115"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="72" name="jefe_local"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="75" name="promociones"/>      
+      <multiplicity id="76" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="78" name="historial_turnos"/>      
+      <multiplicity id="79" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="80">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="81">    
+    <bendpoint x="782" y="1632"/>    
+    <bendpoint x="782" y="1951"/>    
+    <bendpoint x="782" y="2288"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="82">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="83" name="trabajadores"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="85">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <association id="86">    
+    <bendpoint x="1322" y="1115"/>    
+    <bendpoint x="1332" y="1632"/>    
+    <bendpoint x="1343" y="1951"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="87" name="productos"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="89">    
+    <bendpoint x="824" y="1632"/>    
+    <bendpoint x="824" y="1951"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="90" name="productos"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="92">    
+    <bendpoint x="866" y="1632"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <association id="93">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="94" name="locales"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="96">    
+    <bendpoint x="1040" y="1115"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="97" name="promociones"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="99">    
+    <bendpoint x="1343" y="27"/>    
+    <bendpoint x="1343" y="346"/>    
+    <bendpoint x="1343" y="1115"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="100" name="promociones"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="false" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
