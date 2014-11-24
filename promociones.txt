@@ -1,6 +1,7 @@
-20,Combo maxi
+promocion
+20,Combo maxi,213123123
 1e,2f,5re
-10,Combo mini
+10,Combo mini,231233222
 1e,2f
-40,Combo super
+40,Combo super,232323232
 1e,2f,5re,6sre

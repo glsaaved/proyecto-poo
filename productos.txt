@@ -1,3 +1,4 @@
+producto
 1e,Papas fritas,2000,200,1
 2f,Bebida,700,350,2
 5re,Nuggets,1500,12,3

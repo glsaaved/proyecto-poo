@@ -1,8 +1,10 @@
 package proyecto;
 
-public class Producto {
-	private String sku;//codigo de identificacion unico
-	private String nombre;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Producto extends Componente {
 	private int precio;
 	private double cantidad;
 	private String tipo;
@@ -10,6 +12,8 @@ public class Producto {
 	
 	public Producto(String sku,String nombre,int precio,double cantidad, int tipo)
 	{
+		super(nombre,sku);
+		
 		if(tipo==1)
 		{
 			this.tipo="comestible";
@@ -25,20 +29,11 @@ public class Producto {
 			this.tipo="complementario";
 			this.unidades="unidades";
 		}
-		this.sku=sku;
-		this.nombre=nombre;
 		this.precio=precio;
 		this.cantidad=cantidad;
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
+	
 	public int getPrecio() {
 		return precio;
 	}
@@ -55,16 +50,22 @@ public class Producto {
 		this.cantidad = cantidad;
 	}
 
-	public String getSku() {
-		return sku;
-	}
-
 	public String getTipo() {
 		return tipo;
 	}
 
 	public String getUnidades() {
 		return unidades;
+	}
+
+	@Override
+	public int getTotal() {
+		return precio;
+	}
+
+	@Override
+	public String describe() {
+		return super.getSku()+" : "+super.getNombre();
 	}
 	
 

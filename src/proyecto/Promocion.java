@@ -1,33 +1,47 @@
 package proyecto;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
-public class Promocion implements ManejoProductos{
-	private String nombre;
-	private ListaProductos productos;
+public class Promocion extends Componente {
+	private Lista hijos;
 	private int descuento;//entero entre 0 y 100, representa el porcentaje
 	/**
 	 * constructor
 	 * @param d,corresponde al porcentaje de descuento
 	 */
-	public Promocion(int d, String nombre)
+	public Promocion(int d, String nombre,String sku)
 	{
-		this.nombre=nombre;
+		super(nombre,sku);
 		descuento=0;
 		setDescuento(d);
-		productos=new ListaProductos();
+		hijos=new ListaComponentes();
 	}
 	public String getNombre()
 	{
-		return nombre;
+		return super.getNombre();
 	}
-	/**
-	 * metodo interno que calcula el total real de los productos
-	 * @return cont, total de los precios de los productos
-	 */
+	public String getsku()
+	{
+		return super.getSku();
+	}
+
 	private int get_total()
 	{
-		return productos.getTotal();
+		int total=0;
+		for(int i=0;i<hijos.size();i++)
+		{
+			Componente p=(Componente)hijos.search(i);
+			if(p!=null)
+			{
+				total+=p.getTotal();
+			}
+		}
+		return total;
 	}
 
 	/**
@@ -40,113 +54,41 @@ public class Promocion implements ManejoProductos{
 			descuento=d;
 	}
 	@Override
-	/**
-	 * metodo que añade un producto
-	 * @param p, producto a añadir
-	 * @return true si lo agrega, false en otro caso
-	 */
-	public boolean addProducto(Producto p) {
-		if(p != null)
-		{
-			if(this.productos.addProducto(p))
-			{
-				return true;
-			}
-			else
-				return false;
-		}
-		else
-			return false;
-	}
-	@Override
-	/**
-	 * borra un producto de la lista productos
-	 * @param p, producto a borrar
-	 * @return true si lo elimino, false en otro caso
-	 */
-	public boolean deleteProducto(Producto p)
-	{
-		if(productos.contains(p))
-		{
-			if(productos.deleteProducto(p))
-			{
-				return true;
-			}
-			else
-				return false;
-		}
-		return false;
-	}
-	@Override
-	/**
-	 * borra un producto de la lista productos
-	 * @param index, posicion del producto a borrar
-	 * @return true si lo elimino, false en otro caso
-	 */
-	public boolean deleteProducto(int index) {
-		if(index>=0&&productos.size()>0&&productos.size()>index)
-		{
-			productos.deleteProducto(index);
-			return true;
-		}
-		else
-			return false;	
-
-	}
-
-	@Override
-	/**
-	 * metodo que retorna el producto en la posicion index
-	 * @param index, posicion en la lista
-	 * @return producto en la posicion index, null en otro caso
-	 */
-	public Producto getProducto(int index) {
-		if(index < 0 || index >= productos.size())
-		{
-			return null;
-		}
-		else
-		{
-			return productos.getProducto(index);
-		}
-	}
-	@Override
-	/**
-	 * quita todos los productos que sean p
-	 * @param p, producto del cual se deben quitar todas las coincidencias
-	 * @return true si al menos elimino 1, false en otro caso
-	 */
-	public boolean deleteAllProducto(Producto p)
-	{
-		int cont=0;
-		while(deleteProducto(p))
-		{
-			cont++;
-		}
-		if(cont>0)
-			return true;
-		else
-			return false;
-	}
-	@Override
-	/**
-	 * quita todos los elementos de la lista productos
-	 */
-	public void deleteAll()
-	{
-		if(!productos.isEmpty())
-		{
-			productos.deleteAll();
-		}
-	}
-	/**
-	 * retorna el precio de la promocion
-	 * @return el precio total de productos  - descuento
-	 */
 	public int getTotal()
 	{
 		double desc=(descuento/100)*get_total();
 		return (int)(get_total()-desc);
+	}
+	public void add(Componente c) throws ProductoException
+	{ 
+		hijos.add(c); 
+	} 
+	public void remove(Componente c) throws ProductoException
+	{ 
+		hijos.delete(c); 
+	} 
+	public Componente getChild(int i) { 
+		return (Componente)hijos.search(i); 
+	}
+	@Override
+	public String describe() {
+		String s=super.getSku()+" : "+super.getNombre();
+		for(int i=0;i<hijos.size();i++)
+		{
+			Componente c=(Componente) hijos.search(i);
+			if(c!=null)
+				s+="\n"+c.describe();
+		}
+		return s;
+	}
+	
+	@Override
+	/**
+	 * retorna si es promocion
+	 */
+	public boolean getChild()
+	{
+		return true;
 	}
 
 	

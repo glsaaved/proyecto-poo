@@ -5,44 +5,57 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import proyecto.graphics.Tree;
+import proyecto.graphics.ListModels;
+import proyecto.graphics.defaultException;
 
 public class Cadena   {
-	private ListaLocales locales;
-	private ListaProductos productos;
-	private ListaPromociones promociones;
+	private Lista locales;
+	private Lista productos;
 	private String nombre;
 
 	public Cadena(String nombre)
 	{
 		this.nombre=nombre;
 		this.locales=new ListaLocales();
-		this.productos=new ListaProductos();
-		this.promociones=new ListaPromociones();
+		this.productos=new ListaComponentes();
 		
 	}
-	public Cadena(String nombre,ListaLocales locales)
+	public Cadena(String nombre,Lista locales)
 	{
 		this.nombre=nombre;
 		this.locales=locales;
-		this.productos=new ListaProductos();
-		this.promociones=new ListaPromociones();
+		this.productos=new ListaComponentes();
+	}
+	public Cadena(String nombre,Lista locales, Lista componentes)
+	{
+		this.nombre=nombre;
+		this.locales=locales;
+		this.productos=componentes;
+	}
+	public void setLocales(ListaLocales l)
+	{
+		locales=l;
+	}
+	public int sizeLocales()
+	{
+		return locales.size();
 	}
 	/**
 	 * añade un local a la lista locales
 	 * @param l, Local a añadir
 	 * @return true si lo añade, false en otro caso
 	 */
-	public boolean addLocal(Local l)
+	public boolean add(Local l)
 	{
 		if(l!=null)
 		{
-			return locales.addLocal(l);
+			return locales.add(l);
 		}
 		else
 			return false;
@@ -54,7 +67,7 @@ public class Cadena   {
 	 */
 	public boolean crearLocal(String direccion)
 	{
-		return locales.crearLocal(direccion);
+		return ((ListaLocales)locales).crearLocal(direccion);
 	}
 	/**
 	 * elimina un local de la lista locales
@@ -63,10 +76,10 @@ public class Cadena   {
 	 */
 	public boolean deleteLocal(int id)
 	{
-		Local l=locales.buscarLocal(id);
+		Local l=(Local)locales.search(id);
 		if(l!=null)
 		{
-			return locales.deleteLocal(l);
+			return locales.delete(l);
 		}
 		else
 			return false;
@@ -74,10 +87,18 @@ public class Cadena   {
 	/**
 	 * llama al metodo de menu
 	 * @throws IOException
+	 * @throws defaultException 
 	 */
-	public void show()throws IOException 
+	public void show()throws IOException, defaultException 
 	{
-		menu();
+		ListModels ex = new ListModels(this);
+        ex.setVisible(true);
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 	/**
 	 * menu para realizar operaciones sobre los datos de la cadena
@@ -130,7 +151,7 @@ public class Cadena   {
 			}
 			if(opcion==4)
 			{
-				menuCargaProductos(br);
+				//menuCargaProductos(br);
 			}
 			if(opcion==5)
 			{
@@ -138,7 +159,7 @@ public class Cadena   {
 			}
 			if(opcion==6)
 			{
-				menuCargarPromociones(br);
+				//menuCargarPromociones(br);
 			}
 			if(opcion==7)
 			{
@@ -146,7 +167,7 @@ public class Cadena   {
 			}
 			if(opcion==8)
 			{
-				menuCargarLocal(br);
+				//menuCargarLocal(br);
 			}
 		}while(opcion!=9);
 		System.exit(0);
@@ -157,10 +178,10 @@ public class Cadena   {
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
-	private void menuCargarLocal(BufferedReader br) throws FileNotFoundException, IOException {
+	/**private void menuCargarLocal(BufferedReader br) throws FileNotFoundException, IOException {
 		System.out.println("=====================================");
 		System.out.println("=====================================");
-		if(locales.cargarArchivo(productos,promociones))
+		if(locales.loadFile("locales.txt"))
 			System.out.println("Se cargaron correctamente las promociones");
 		else
 			System.out.println("Ocurrio un error, verifique el archivo promociones.txt");
@@ -168,7 +189,7 @@ public class Cadena   {
 		System.out.println("=====================================");
 		menu();
 		
-	}
+	}**/
 	/**
 	 * sin implementacion
 	 * @param br
@@ -184,11 +205,11 @@ public class Cadena   {
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
-	private void menuCargarPromociones(BufferedReader br) throws FileNotFoundException, IOException {
+	/**private void menuCargarPromociones(BufferedReader br) throws FileNotFoundException, IOException {
 		
 		System.out.println("=====================================");
 		System.out.println("=====================================");
-		if(promociones.cargarArchivo(productos))
+		if(productos.loadFile("promociones.txt"))
 			System.out.println("Se cargaron correctamente las promociones");
 		else
 			System.out.println("Ocurrio un error, verifique el archivo promociones.txt");
@@ -196,7 +217,7 @@ public class Cadena   {
 		System.out.println("=====================================");
 		menu();
 		
-	}
+	}**/
 	/**
 	 * sin implementacion
 	 * @param br
@@ -212,11 +233,11 @@ public class Cadena   {
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
-	private void menuCargaProductos(BufferedReader br) throws FileNotFoundException, IOException {
-		productos=new ListaProductos();
+	/**private void menuCargaProductos(BufferedReader br) throws FileNotFoundException, IOException {
+		productos=new ListaComponentes();
 		System.out.println("=====================================");
 		System.out.println("=====================================");
-		if(productos.cargarArchivo())
+		if(productos.loadFile("productos.txt"))
 			System.out.println("Se cargaron correctamente los productos");
 		else
 			System.out.println("Ocurrio un error, verifique el archivo productos.txt");
@@ -224,7 +245,7 @@ public class Cadena   {
 		System.out.println("=====================================");
 		menu();
 		
-	}
+	}**/
 	/**
 	 * lista los locales en la lista locales
 	 */
@@ -233,7 +254,7 @@ public class Cadena   {
 		if(locales.size()>0)
 			for(int i=0;i<locales.size();i++)
 			{
-				System.out.println(i+". Local :" + locales.getLocal(i).getId()+" , Direccion: "+locales.getLocal(i).getDireccion());
+				System.out.println(i+". Local :" + ((Local)locales.search(i)).getId()+" , Direccion: "+((Local)locales.search(i)).getDireccion());
 			}
 		else
 			System.out.println("No hay locales");
@@ -245,7 +266,6 @@ public class Cadena   {
 	 */
 	public void menuAgregar(BufferedReader br) throws IOException
 	{
-		Principal.clearConsole();
 		int opcion = 0;
 		String s;
 		System.out.println("=====================================");
@@ -268,7 +288,7 @@ public class Cadena   {
 				opcion=0;
 			}
 		}while (opcion!=1);
-		locales.crearLocal(s);
+		((ListaLocales)locales).crearLocal(s);
 		menu();
 		
 	}
@@ -279,7 +299,6 @@ public class Cadena   {
 	 */
 	private void menuEliminar(BufferedReader br) throws IOException {
 		
-		Principal.clearConsole();
 		int opcion = 0;
 		int eliminar=-1;
 		System.out.println("=====================================");
@@ -309,10 +328,10 @@ public class Cadena   {
 				opcion=0;
 			}
 		}while (opcion!=1);
-		Local l=locales.buscarLocal(eliminar);
+		Local l=(Local)((ListaLocales)locales).searchId(eliminar);
 		if(l!=null)
 		{
-			locales.deleteLocal(l);
+			locales.delete(l);
 			System.out.println("Se elimino exitosamente");
 		}
 		else
@@ -327,8 +346,7 @@ public class Cadena   {
 	 * @throws IOException
 	 */
 	private void menuDetalle(BufferedReader br) throws IOException {
-		Principal.clearConsole();
-		int eliminar=-1;
+		int id=-1;
 		System.out.println("=====================================");
 		System.out.println("=====================================");
 		System.out.println("######### DETALLE LOCAL  ############");
@@ -337,15 +355,15 @@ public class Cadena   {
 		{
 			System.out.println("Digite el id del local");
 			try{
-				eliminar=Integer.parseInt(br.readLine());
+				id=Integer.parseInt(br.readLine());
 			}
 			catch(Exception e)
 			{
-				eliminar=-1;
+				id=-1;
 			}
 			System.out.println("=====================================");
-		}while (eliminar==-1);
-		Local l=locales.buscarLocal(eliminar);
+		}while (id==-1);
+		Local l=(Local)((ListaLocales)locales).searchId(id);
 		if(l!=null)
 		{
 			l.show();
@@ -357,6 +375,47 @@ public class Cadena   {
 		menu();
 		
 	}
-
-
+	public Local search(int i)
+	{
+		return (Local)locales.search(i);
+	}
+	public void loadProductos(File f) throws FileNotFoundException, IOException, loadFileException
+	{
+		productos.loadFile(f);
+	}
+	public String productosCargados()
+	{
+		String s="";
+		for(int i=0;i<productos.size();i++)
+		{
+			Componente c=(Componente)productos.search(i);
+			if(c!=null)
+			{
+				s+=c.describe();
+			}
+		}
+		return s;
+	}
+	public int sizeComponentes()
+	{
+		return productos.size();
+	}
+	public Componente searchComponente(int i)
+	{
+		return (Componente)productos.search(i);
+	}
+	public void deleteComponente(Object o)
+	{
+		if(o!=null)
+			productos.delete(o);
+	}
+	public boolean saveFile(File f) throws saveFileException, IOException
+	{
+		productos.saveFile(f);
+		if(locales.saveFile(f))
+			return true;
+		
+		return false;
+		
+	}
 }

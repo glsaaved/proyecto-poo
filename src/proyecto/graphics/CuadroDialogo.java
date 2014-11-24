@@ -10,11 +10,14 @@ import proyecto.*;
  
 public class CuadroDialogo
 {
+	static ImageIcon img;
   static JFrame frame;
  
   public static void displayJFrame()
   {
     frame = new JFrame("Fast Food Delivery");
+    img = new ImageIcon("icon.png");
+    frame.setIconImage(img.getImage());
     
     JLabel userLabel = new JLabel("Cadena");
 	userLabel.setBounds(10, 10, 80, 25);
@@ -51,11 +54,19 @@ public class CuadroDialogo
 			try {
 				frame.setVisible(false);
 				c.show();
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			} 
     	 // c.show(frame);
+			catch (defaultException e1) {
+				// TODO Auto-generated catch block
+				JOptionPane optionPane = new JOptionPane(e1.getMessage(), JOptionPane.ERROR_MESSAGE);   
+				  JDialog dialog = optionPane.createDialog("Error");
+				  dialog.setAlwaysOnTop(true);
+				  dialog.setVisible(true);
+			}
+			catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
       }
     });
     closeButton.addActionListener(new ActionListener ()
